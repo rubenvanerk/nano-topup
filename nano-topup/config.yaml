@@ -1,0 +1,3 @@
+BUYING_IN_PROGRESS: '0'
+nano: {address: xrb_1zan777hebyb5y39akbt1a58cgfh9domu6xbebrrbx5j14ucc765sky6rs89,
+  buy_amount: 10, threshold: 25}
