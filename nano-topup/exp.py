@@ -23,7 +23,7 @@ binance_api_secret = os.environ["BINANCE_API_SECRET"]
 
 gdax_client = gdax.AuthenticatedClient(gdax_api_key, gdax_api_secret, gdax_api_pass_phrase)
 
-binance_client = Client(binance_api_key, binance_api_secret)
+binance_client = Client(binance_api_key, binance_api_secret, {"timeout": 30})
 
 
 # check nano balance
