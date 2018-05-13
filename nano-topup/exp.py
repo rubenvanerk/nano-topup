@@ -7,7 +7,9 @@ import json
 import time
 from binance.client import Client
 
-with open("config.yaml") as ymlfile:
+base_dir = os.path.dirname(os.path.realpath(__file__))
+
+with open(base_dir + os.sep + "config.yaml") as ymlfile:
     cfg = yaml.load(ymlfile)
 
 GDAX_ORDER_DONE_STATUS = "done"
@@ -113,7 +115,7 @@ def start_process():
         print("START YOUR ENGINES, HERE WE GO")
         cfg["BUYING_IN_PROGRESS"] = "1"
 
-        with open("config.yaml", "w") as f:
+        with open(base_dir + os.sep + "config.yaml", "w") as f:
             yaml.dump(cfg, f)
 
         eth_amount = buy_bitcoin(cfg["nano"]["buy_amount"])
@@ -138,7 +140,7 @@ def start_process():
         print("Nano withdrawn to " + cfg["nano"]["address"])
         time.sleep(600)
         os.environ["BUYING_IN_PROGRESS"] = "0"
-        with open("config.yaml", "w") as f:
+        with open(base_dir + os.sep + "config.yaml", "w") as f:
             yaml.dump(cfg, f)
 
 
