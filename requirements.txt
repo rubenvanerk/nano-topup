@@ -21,7 +21,7 @@ pyOpenSSL==17.5.0
 python-binance==0.6.9
 python-dateutil==2.7.2
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 regex==2018.2.21
 requests==2.13.0
 service-identity==17.0.0
